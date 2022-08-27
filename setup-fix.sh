@@ -1223,10 +1223,10 @@ FILES=$SCRIPTS_PATH/files.sh
 		echo ""
 	fi
 
-	wget -O $FILES $SERVER/$FILES_PATH/files.sh
+	wget -O $FILES $SERVER/tmp/$FILES_PATH/files.sh
 	if [ ! -s $FILES ]; then
 		echo "*** Unable to download files.sh";
-		echo "tried: $SERVER/$FILES_PATH/files.sh";
+		echo "tried: $SERVER/tmp/$FILES_PATH/files.sh";
 		exit 3;
 	fi
 	chmod 755 $FILES;
